@@ -1,0 +1,11 @@
+network
+netsh interface ip set address "Ethernet" dhcp
+netsh interface ip set address name="Ethernet" static 192.168.1.200 255.255.255.0 192.168.1.254 1
+netsh interface ipv4 set subinterface "Ethernet" mtu=384 store=persistent
+ping 172.16.2.33 -t -l 64 -w 2000
+route add 172.16.0.0 mask 255.255.0.0 192.168.2.238 -p
+route print
+ipconfig
+arp -a
+disc
+subst V: "\\192.168.2.8\public"
