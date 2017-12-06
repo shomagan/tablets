@@ -1,0 +1,6 @@
+df -h #disk space available
+free -m #ram space available
+cat /proc/meminfo # ram info
+ps -ela #process list
+top #dinamic process list
+htop # htop like top with memory usage detale
